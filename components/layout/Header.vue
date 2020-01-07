@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <header>
     <div class="top-bar">
       <div class="row row-top-bar">
         <p class="welcome">Welcome to Moon & Earth Shop</p>
@@ -38,5 +38,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
