@@ -1,7 +1,15 @@
 <template>
-  <div class="index"></div>
+  <div class="index-page">
+    <slide-home />
+  </div>
 </template>
 
 <script>
-export default {}
+import SlideHome from '~/components/SlideHome.vue'
+
+export default {
+  components: {
+    SlideHome
+  }
+}
 </script>

@@ -26,6 +26,7 @@ export default {
   methods: {
     toogleMap() {
       this.$refs.googlemap.classList.toggle('show-map')
+      this.$scrollToSmooth('.see-map', null, -30)
     },
     scrollUp() {
       this.$scrollToSmooth('top')

@@ -221,6 +221,66 @@ a {
   padding-left: 10px;
 }
 
+.container-search-bar {
+  border-bottom: 1px solid #dedede;
+  padding: 32px 0;
+  margin-bottom: 30px;
+}
+
+.row.search-bar {
+  display: grid;
+  grid-template-columns: 600px auto;
+}
+
+.search-bar .search-box {
+  display: grid;
+  grid-template-columns: 180px auto;
+}
+
+.search-box .select-cat a {
+  display: inline-block;
+  padding: 14px 20px 15px 20px;
+  height: 50px;
+  width: 180px;
+  border: 2px solid #eee;
+  cursor: pointer;
+  user-select: none;
+}
+.search-box .select-cat a:after {
+  content: '\203A';
+  display: inline-block;
+  font-family: monospace, tahoma;
+  color: #aaa;
+  margin-left: 55px;
+  transform: rotate(90deg);
+}
+
+.search-box .form-search input {
+  width: 100%;
+  padding: 15px 20px;
+  height: 50px;
+  border: 2px solid #eee;
+  border-left: 0;
+  outline: none;
+}
+
+.row.search-bar .phone {
+  text-align: right;
+  line-height: 50px;
+}
+
+.row.search-bar .phone a {
+  color: #555;
+}
+.row.search-bar .phone a svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--main-color);
+  stroke: var(--main-color);
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
 .map {
   margin: 30px 0;
 }
