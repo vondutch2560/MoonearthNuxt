@@ -15,6 +15,23 @@ ul li {
   --main-color: #6dadb0 /* dec18c c5cda0 6dadb0*/;
   --width-logo: 130px;
 }
+
+h1 {
+  font-size: 34px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 27px;
+}
+h4 {
+  font-size: 24px;
+}
+
+.grid {
+  display: grid;
+}
 /* Add font Varela Round và Playfair Display download từ google font */
 /* hebrew */
 @font-face {
@@ -279,6 +296,10 @@ a {
   stroke: var(--main-color);
   vertical-align: middle;
   margin-right: 4px;
+}
+
+.container-slideshow {
+  padding-bottom: 50px;
 }
 
 .map {

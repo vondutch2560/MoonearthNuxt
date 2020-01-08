@@ -41,7 +41,7 @@ export default {
 
   computed: {
     currentImg() {
-      return this.images[this.currentIndex]
+      return this.timer == null ? '' : this.images[this.currentIndex]
     }
   },
 
