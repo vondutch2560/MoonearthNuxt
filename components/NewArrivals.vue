@@ -60,6 +60,10 @@ export default {
 </script>
 
 <style>
+.container-new-arrivals {
+  padding-bottom: 60px;
+}
+
 .new-arrivals h2 {
   border-bottom: 1px solid var(--main-color);
   padding-bottom: 12px;

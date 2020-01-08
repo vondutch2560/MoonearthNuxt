@@ -25,6 +25,7 @@ export default {
    ** Global CSS
    */
   css: [
+    '@/assets/css/transition.css',
     '@/assets/css/main.css',
     '@/assets/css/responsive-1920.css',
     '@/assets/css/responsive-1200.css',

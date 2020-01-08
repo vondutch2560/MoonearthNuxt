@@ -14,26 +14,16 @@
         </div>
         <div class="menu">
           <ul class="parent-menu">
-            <li>
-              <a href="javascript:;">HOME</a>
-            </li>
+            <li><NuxtLink to="/">HOME</NuxtLink></li>
             <li>
               <a href="javascript:;">SẢN PHẨM</a>
               <ul>
-                <li>
-                  <a href="javascript:;">Đồng Hồ</a>
-                </li>
-                <li>
-                  <a href="javascript:;">Key Holder</a>
-                </li>
+                <li><a href="javascript:;">Đồng Hồ</a></li>
+                <li><a href="javascript:;">Key Holder</a></li>
               </ul>
             </li>
-            <li>
-              <a href="javascript:;">GÓC CHIA SẺ</a>
-            </li>
-            <li>
-              <a href="javascript:;">LIÊN HỆ</a>
-            </li>
+            <li><a href="javascript:;">GÓC CHIA SẺ</a></li>
+            <li><NuxtLink to="/contact">LIÊN HỆ</NuxtLink></li>
           </ul>
         </div>
       </div>
