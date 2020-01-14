@@ -18,15 +18,20 @@ export default {
     Breadcrumb
   },
 
-  data() {
-    return {
-      propsBreadcrumb: [
-        {
-          name: 'Liên hệ',
-          link: '/contact'
-        }
-      ]
-    }
+  asyncData() {
+    return new Promise((resolve) => {
+      // eslint-disable-next-line nuxt/no-timing-in-fetch-data
+      setTimeout(function() {
+        resolve({
+          propsBreadcrumb: [
+            {
+              name: 'Liên hệ',
+              link: '/contact'
+            }
+          ]
+        })
+      }, 1000)
+    })
   }
 }
 </script>
