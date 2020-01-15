@@ -32,6 +32,15 @@ h4 {
 .grid {
   display: grid;
 }
+
+.btn {
+  display: inline-block;
+  padding: 9px 25px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  background: var(--main-color);
+}
 /* Add font Varela Round và Playfair Display download từ google font */
 /* hebrew */
 @font-face {
@@ -338,6 +347,101 @@ a {
 }
 .google-map.show-map {
   max-height: 460px;
+}
+
+.main-contact.grid {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  margin-top: 40px;
+}
+
+.main-contact .contact-form {
+  text-align: center;
+}
+
+.main-contact .contact-form h3 {
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.main-contact .contact-form label {
+  display: block;
+  font-size: 13px;
+  margin: 22px 0 7px 0;
+}
+
+.main-contact .contact-form input,
+.main-contact .contact-form textarea {
+  width: 100%;
+  font-size: 14px;
+  color: #555;
+  border: none;
+  outline: none;
+  background-color: #f3f3f3;
+  padding: 10px 15px;
+  resize: vertical;
+  transition: background-color 0.3s;
+}
+
+.main-contact .contact-form textarea {
+  min-height: 140px;
+  max-height: 200px;
+}
+
+.main-contact .contact-form input:focus,
+.main-contact .contact-form textarea:focus {
+  background-color: #e6e6e6;
+}
+
+.main-contact .contact-form .btn-send {
+  margin-top: 20px;
+  min-width: 125px;
+  padding: 7px 25px;
+  position: relative;
+  border: 2px solid transparent;
+}
+.main-contact .contact-form .btn-send:after {
+  content: '';
+  position: absolute;
+  background-color: var(--main-color);
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+}
+
+.main-contact .contact-form .btn-send:hover:after {
+  animation: hoverBtnUnderline 0.3s linear;
+}
+.main-contact .contact-form .btn-send:hover {
+  animation: hoverBtnBackground 1s;
+}
+@keyframes hoverBtnUnderline {
+  0% {
+    left: 0;
+    width: 10%;
+  }
+  30% {
+    left: 25%;
+    width: 45%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes hoverBtnBackground {
+  58% {
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+  }
+  35%,
+  100% {
+    background-color: var(--main-color);
+    border: 2px solid transparent;
+  }
 }
 
 .row.footer {

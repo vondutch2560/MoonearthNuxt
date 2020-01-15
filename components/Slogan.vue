@@ -46,6 +46,19 @@ export default {}
 
 .row.slogan .img-slogan {
   position: relative;
+  overflow: hidden;
+}
+
+.row.slogan .img-slogan:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-40deg) translate(0, -200%);
+  transition: transform 0.4s;
 }
 
 .img-slogan .bg-slogan {
@@ -69,5 +82,12 @@ export default {}
   right: -15px;
   bottom: -15px;
   border: 2px solid var(--main-color);
+}
+
+.row.slogan .img-slogan:hover .bg-slogan {
+  background-size: 110%;
+}
+.row.slogan .img-slogan:hover:after {
+  transform: rotate(-40deg) translate(0, 200%);
 }
 </style>
