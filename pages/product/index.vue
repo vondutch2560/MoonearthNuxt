@@ -68,6 +68,7 @@
               </li>
             </ul> -->
             <sidebar-categories :categories="categories" />
+            {{ sidebarCat }}
           </div>
         </div>
         <div class="product-list-view grid"></div>
@@ -94,6 +95,8 @@ export default {
       // eslint-disable-next-line nuxt/no-timing-in-fetch-data
       setTimeout(function() {
         resolve({
+          sidebarCat: [],
+          spliceCat: [],
           propsBreadcrumb: [
             {
               name: 'Đồng hồ',
@@ -102,24 +105,14 @@ export default {
           ],
           categories: [
             {
-              id: 1,
-              name: 'Đồng Hồ',
-              parentId: 0
-            },
-            {
               id: 5,
               name: 'Đồng Hồ Vuông',
               parentId: 1
             },
             {
-              id: 6,
-              name: 'Đồng Hồ Chữ Nhật',
-              parentId: 1
-            },
-            {
-              id: 7,
-              name: 'Đồng Hồ Trụ',
-              parentId: 1
+              id: 1,
+              name: 'Đồng Hồ',
+              parentId: 0
             },
             {
               id: 9,
@@ -127,9 +120,19 @@ export default {
               parentId: 0
             },
             {
+              id: 7,
+              name: 'Đồng Hồ Trụ',
+              parentId: 1
+            },
+            {
               id: 10,
               name: 'Hộp Khóa Mèo',
               parentId: 9
+            },
+            {
+              id: 6,
+              name: 'Đồng Hồ Chữ Nhật',
+              parentId: 1
             },
             {
               id: 11,
@@ -140,6 +143,33 @@ export default {
         })
       }, 10)
     })
+  },
+
+  mounted() {
+    this.createRescusiveCat(this.categories)
+  },
+
+  methods: {
+    createRescusiveCat(arrCat, parentId = 0) {
+      arrCat.forEach((cat) => {
+        if (
+          cat.parentId === parentId &&
+          this.searchArray(this.spliceCat, cat)
+        ) {
+          this.sidebarCat.push(cat)
+          this.spliceCat.push(cat)
+          this.createRescusiveCat(arrCat, cat.id)
+        }
+      })
+    },
+
+    searchArray(arr, currentItem) {
+      let result = true
+      arr.forEach((item) => {
+        if (item.id === currentItem.id) result = false
+      })
+      return result
+    }
   }
 }
 </script>

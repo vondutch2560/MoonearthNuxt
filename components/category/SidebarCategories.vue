@@ -1,5 +1,5 @@
 <template>
-  <ul v-if="isCorrectChild">
+  <ul v-if="false">
     <li v-for="item in categories" :key="item.id">
       <a>{{ item.name }}</a>
       <Resucrsive
