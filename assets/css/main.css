@@ -14,6 +14,15 @@ ul li {
 :root {
   --main-color: #6dadb0 /* dec18c c5cda0 6dadb0*/;
   --width-logo: 130px;
+  --width-sidebar-product: 270px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display';
+  font-weight: 400;
 }
 
 h1 {
@@ -360,8 +369,6 @@ a {
 }
 
 .main-contact .contact-form h3 {
-  font-family: 'Playfair Display';
-  font-weight: 400;
   margin-bottom: 40px;
 }
 
@@ -444,6 +451,90 @@ a {
   }
 }
 
+/* Product Page */
+.products-main {
+  margin-top: 50px;
+}
+
+.products-main.grid {
+  grid-template-columns: var(--width-sidebar-product) auto;
+  grid-gap: 40px;
+}
+
+.products-main .sidebar .widget {
+  margin-bottom: 40px;
+}
+
+.products-main .sidebar .widget h4 {
+  font-size: 21px;
+}
+
+.products-main .sidebar .search-product div {
+  margin-top: 10px;
+  position: relative;
+}
+
+.products-main .sidebar .search-product input {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #eee;
+  padding: 0 50px 0 15px;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.2s;
+  color: #888;
+}
+
+.products-main .sidebar .search-product button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  color: #555;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.products-main .sidebar .search-product input:focus {
+  border: 2px solid var(--main-color);
+  color: #444;
+}
+
+.products-main .sidebar .search-product button:hover svg {
+  color: var(--main-color);
+}
+
+.products-main .sidebar .categories ul {
+  padding: 0;
+  margin-top: 12px;
+}
+.products-main .sidebar .categories ul li {
+  border-top: 1px solid #dfdfdf;
+  padding: 5px 0;
+}
+.products-main .sidebar .categories ul li:first-child {
+  border-top: none;
+}
+.products-main .sidebar .categories ul li a {
+  padding: 10px 5px;
+  transition: all 0.2s;
+  display: block;
+  color: #888;
+}
+.products-main .sidebar .categories ul li a:active,
+.products-main .sidebar .categories ul li:hover a {
+  transform: translateX(10px);
+  color: var(--main-color);
+}
+
+/* END Product Page */
+
 .row.footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -455,8 +546,6 @@ a {
 }
 
 .row.footer h4 {
-  font-family: 'Playfair Display';
-  font-weight: 400;
   font-size: 24px;
   color: #555;
   margin-bottom: 28px;

@@ -18,7 +18,7 @@
             <li>
               <a href="javascript:;">SẢN PHẨM</a>
               <ul>
-                <li><a href="javascript:;">Đồng Hồ</a></li>
+                <li><NuxtLink to="/product">Đồng Hồ</NuxtLink></li>
                 <li><a href="javascript:;">Key Holder</a></li>
               </ul>
             </li>
